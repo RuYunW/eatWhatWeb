@@ -20,6 +20,7 @@
 <%--中间主界面--%>
 <div class="main">
     <%=session.getAttribute("testResult")%>
+<%--    --%>
 </div>
 
 </body>
