@@ -28,16 +28,19 @@ public class Register extends HttpServlet {
             //如果返回不为空，则重名,留在原地
             session.setAttribute("registerResult", "用户名重复");
             request.getRequestDispatcher("store_manager_register.jsp").forward(request, response);
+//            response.getWriter().print("<script language='javascript'>alert('弹出信息')</script>");
+//            response.setHeader("refresh", "1;URL=/web/store_manager_register.jsp");
 
         }
         else if (password.length() < 6) {
             //密码长度小于6位,留在原地
-            session.setAttribute("register_result", "密码长度不足6位");
+            session.setAttribute("registerResult", "密码长度不足6位");
             request.getRequestDispatcher("store_manager_register.jsp").forward(request, response);
         }
         else if (!rePassword.equals(password)) {
             //两次密码输入不一致
-            session.setAttribute("register_result", "两次密码输入不一致，请检查");
+            session.setAttribute("registerResult", "两次密码输入不一致，请检查");
+            request.getRequestDispatcher("store_manager_register.jsp").forward(request,response);
         }
         else {
             //密码长度大于6位，也无用户名冲突

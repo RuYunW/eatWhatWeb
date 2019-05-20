@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.wry.jdbc.dao.StoreDao" %>
+<%@ page import="com.wry.jdbc.dao.UsersDao" %><%--
   Created by IntelliJ IDEA.
   User: Ash
   Date: 2019/5/19
@@ -29,7 +30,8 @@
 <body style="background:url(./imgs/BG2018.jpg) no-repeat;background-size:100%;background-attachment:fixed;background-position-y: 90%; ">
 
 <br>
-<div class="manager_title">店铺<%=session.getAttribute("storeID")%>管理界面</div>
+<%--<div class="manager_title">店铺<%=session.getAttribute("storeID")%>管理界面</div>--%>
+<%@include file="store_name.jsp"%>
 <a href="index.jsp" class="manager" style="text-align: center;float: right">返回首页</a>
 
 <br>
@@ -49,8 +51,33 @@
 
     <%--中间主界面--%>
     <div class="main">
-        jahah
-
+        <div style="font-family: '等线 Light';font-size: larger;margin: 5%;">
+        <table style="text-align: left">
+            <tr>
+                <th>店铺ID:</th>
+                <td><%=session.getAttribute("storeID")%></td>
+            </tr>
+            <tr>
+                <th>店铺名称</th>
+                <td><%=session.getAttribute("storeName")%></td>
+            </tr>
+            <tr>
+                <th>店铺位置</th>
+                <td>
+                    <%
+                        StoreDao storeDao = new StoreDao();
+                        out.print(storeDao.find((String)session.getAttribute("storeID")).getStoreLoc());
+                    %>
+                </td>
+            </tr>
+            <tr>
+                <th>管理员用户名</th>
+                <td>
+                    <%=session.getAttribute("username")%>
+                </td>
+            </tr>
+        </table>
+        </div>
     </div>
 </div>
 

@@ -30,7 +30,8 @@
 <body style="background:url(./imgs/BG2018.jpg) no-repeat;background-size:100%;background-attachment:fixed;background-position-y: 90%; ">
 
 <br>
-<div class="manager_title">店铺<%=session.getAttribute("storeID")%>管理界面</div>
+<%--<div class="manager_title">店铺<%=session.getAttribute("storeID")%>管理界面</div>--%>
+<%@include file="store_name.jsp"%>
 <a href="index.jsp" class="manager" style="text-align: center;float: right">返回首页</a>
 
 <br>
@@ -50,7 +51,8 @@
 
     <%--中间主界面--%>
     <div class="main">
-        <table>
+        <div style="font-family: '等线 Light';font-size: larger;margin: 5%;">
+        <table style="text-align: center">
             <tr>
                 <th>菜品名</th>
                 <th>星标数量</th>
@@ -67,7 +69,7 @@
                             +"</tr>");
                 }
             %>
-        </table>
+        </table></div>
 
     </div>
 </div>

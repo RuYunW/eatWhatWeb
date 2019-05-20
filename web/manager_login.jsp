@@ -43,9 +43,10 @@
     String failState = (String) session.getAttribute("state");
     if (failState == null) {
     } else {
-        System.out.println(failState);
-%>
-    <%=failState%>
+    %>
+    <script type="text/javascript">
+        alert("<%=session.getAttribute("state")%>");
+    </script>
     <%
         }
         session.setAttribute("state", null);

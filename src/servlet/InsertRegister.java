@@ -123,6 +123,7 @@ public class InsertRegister extends HttpServlet {
             session.setAttribute("storeID",store_id);
             session.setAttribute("storeName",request.getParameter("store_name"));
             session.setAttribute("storeLoc",storeLoc);
+            session.setAttribute("username",session.getAttribute("register_username"));
             //set对象变量
             user.setManager_store_id(store_id);
             user.setUsername((String)session.getAttribute("register_username"));
