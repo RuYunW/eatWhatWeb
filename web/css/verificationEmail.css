@@ -1,0 +1,33 @@
+a:link{color:black;}
+a:visited{color:black;}
+a:hover{color:dodgerblue;}
+a:active{color:dodgerblue;}
+a{text-decoration:none;font-family: "等线 Light";font-size: 20px;}
+
+.input_box {
+    color: gray;
+    height:40px;
+    width: 250px;
+    font-size: large;
+    font-family: "等线 Light";
+    padding: 8px;
+    margin-top: 8px;
+    border-color: gainsboro;
+    border-style:solid;
+    border-width: 1px;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.submit {
+    color: white;
+    height:40px;
+    width: 122px;
+    font-size: large;
+    font-family: "等线 Light";
+    padding: 8px;
+    margin-top: 30px;
+    border-color: gainsboro;
+    border-style:solid;
+    border-width: 1px;
+    background-color: rgba(0,79,142,0.3);
+}

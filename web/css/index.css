@@ -1,0 +1,215 @@
+html, body { height: 100%;margin: 0;}
+
+a:link{color:black;}
+a:visited{color:black;}
+a:hover{color:darkred;}
+a:active{color:darkred;}
+
+a.access{
+    text-decoration: none;
+    font-family: "等线 Light";
+    font-size: 20px;
+    line-height: 200%;
+    }
+a.tag:link{color:black;}
+a.tag:visited{color:black;}
+a.tag:hover{color:darkred;}
+a.tag:active{color:darkred;}
+/*取消下划线*/
+a.tag{text-decoration:none;font-family: "等线 Light";font-size: 20px;}
+a{text-decoration:none;font-family: "等线 Light";font-size: 20px;}
+
+a.link:link{color:black;}
+a.link:visited{color:black;}
+a.link:hover{color:white;}
+a.link:active{color:white;}
+a.link{
+    text-decoration: none;
+    font-family: "等线 Light";
+    font-size: 20px;
+    /*padding-left: 20px;*/
+    /*padding-bottom: 10px;*/
+    /*padding-top: 10px;*/
+    line-height: 200%;
+    /*display: block;*/
+    }
+
+a.sub_title{
+    text-decoration: none;
+    font-family: '黑体';
+    font-size: 20px;
+    padding-left: 20px;
+    line-height: 200%;
+}
+
+.body{
+    background:url(../imgs/BG_eat.jpg) no-repeat;
+    background-size:100%;
+    float: bottom;
+    background-attachment: fixed;
+    background-position-y:90%;
+}
+
+.container {
+    /*background-repeat:no-repeat ;*/
+    /*background-size:100%;*/
+    /*background-attachment: fixed;*/
+    width: auto;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 10px;
+}
+
+.tag_container {
+    width: 100%;
+    height: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.title {
+    width: 100%;
+    height: 14%;
+    /*margin-bottom: 0;*/
+    padding: 0;
+    /*margin: 20px;*/
+    padding: 20px;
+    background: rgba(100,0,0,0.3);
+}
+
+.logo{
+    width: 10%;
+    /*padding: 10px;*/
+    /*margin: 20px;*/
+    height: auto;
+    float: left;
+}
+.name{
+    /*山东师范大学title*/
+    /*text-align: center;*/
+    font-size: x-large;
+    font-family: 等线;
+    margin-top: 1%;
+    /*background-color: rgba(255,255,255,0.7);*/
+    /*垂直居中*/
+    /*vertical-align: middle;*/
+    width: auto;
+    height: auto;
+    float: left;
+    /*float: right;*/
+}
+.search{
+    width: auto;
+    height: 100px;
+    margin-right: 60px;
+    float: right;
+}
+.input_search {
+    color: gray;
+    height:40px;
+    width: 250px;
+    font-size: large;
+    font-family: 等线;
+    padding: 8px;
+    margin-top: 16px;
+    border-color: gainsboro;
+    border-style:solid;
+    border-width: 1px;
+}
+.cate_container {
+    /*margin: 0 auto;*/
+    width: 100%;
+    /*position: center;*/
+    height : 10%;
+    background: white;
+    padding: 0px;
+}
+.category {
+    width: 8%;
+    /*position: center;*/
+    /*margin: 6px auto;*/
+    margin-left: 3%;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    line-height: 250%;
+    /*vertical-align: middle;*/
+    /*padding: 15px;*/
+    float: left;
+    background-color: white;
+    height : 80%;
+}
+.left {
+    width: 66%;
+    height: 100%;
+    /*margin-top: 1%;*/
+    /*margin-left: 10px;*/
+    /*margin-right: 0;*/
+
+    font-family: 等线;
+    font-size: larger;
+    float: left;
+    /*background: white;*/
+}
+.right {
+    width: 32%;
+    height: 100%;
+    font-family: 等线;
+    font-size: larger;
+    /*margin-top: 1% ;*/
+    /*margin-left: 0px;*/
+    /*margin-right: 20px;*/
+    float: right;
+    /*background: white;*/
+}
+.left_1{
+    height: auto;
+    background-color: rgba(255,255,255,0.8);
+}
+.left_2{
+    height: 41%;
+    margin-bottom: 20px;
+    margin-top: 0;
+    padding-left: 20px;
+    background-color: rgba(255,255,255,0.5);
+    /*background: white;*/
+}
+.right_1{
+    height: 26%;
+    /*background: white;*/
+    background-color: rgba(255,255,255,0.5);
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.right_2{
+    height: 20%;
+    /*background: white;*/
+    margin-bottom: 20px;
+    padding-left: 20px;
+    background-color: rgba(255,255,255,0.5);
+}
+.bottom {
+    width: 100%;
+    height: auto;
+    /*margin-left: 20px;*/
+    /*margin-right:10px ;*/
+    padding: 0px;
+    /*background: #003399;*/
+    float:left;
+    text-align: right;
+    background-color: rgba(255,255,255,1);
+}
+.sub_title{
+    color: black;
+    font-family: '等线 Light';
+    font-size:x-large;
+    line-height: 150%;
+}
+
+
+
+
+

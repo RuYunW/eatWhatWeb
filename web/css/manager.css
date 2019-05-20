@@ -1,0 +1,91 @@
+
+a{text-decoration:none;font-family: "等线 Light";font-size: 20px;}
+
+a.manager:link{color:black;}
+a.manager:visited{color:black;}
+a.manager:hover{color:dodgerblue;}
+a.manager:active{color:dodgerblue;}
+a.manager{
+    text-decoration: none;
+    font-family: "等线 Light";
+    font-size: 20px;
+    line-height: 200%;
+}
+
+
+
+/*标签栏切换*/
+.tag_switch{
+    width: 12%;
+    height: 80%;
+    background: rgba(255,255,255,0.5);
+    float: left;
+}
+
+/*题目*/
+.manager_title{
+    font-family: "等线 Light";
+    font-size: xx-large;
+    color: gray;
+    margin-left: 30px;
+}
+.input_search {
+    color: gray;
+    height:40px;
+    width: 250px;
+    font-size: large;
+    font-family: "等线 Light";
+    padding: 8px;
+    margin-top: 8px;
+    border-color: gainsboro;
+    border-style:solid;
+    border-width: 1px;
+    background-color: rgba(255,255,255,0.5);
+
+}
+/*左边单个小tag*/
+.tag_manager{
+    alignment: center;
+    font-family: "等线 Light";
+    font-size: large;
+    margin-top:15px;
+    margin-left: 0;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+    width: auto;
+    line-height: 250%;
+    height: auto;
+    text-align: center;
+    background: rgba(255,255,255,0.5);
+
+}
+
+.main{
+      width: 87%;
+      background: rgba(255,255,255,0.5);
+      float: right;
+      height: 80%;
+  }
+
+.tag_manager_selected{
+    alignment: center;
+    font-family: "等线 Light";
+    font-size: large;
+    margin-top:15px;
+    margin-left: 0;
+    /*padding-top: 10px;*/
+    /*padding-bottom: 10px;*/
+
+    line-height: 250%;
+    height: auto;
+    text-align: center;
+    background: rgba(70,130,180,0.3);
+    width: 106%;
+    color: white;
+    border-width: 1px;
+    border-style: solid;
+    border-bottom-color: white;
+    border-right-color: white;
+    border-top-color: white;
+
+}
