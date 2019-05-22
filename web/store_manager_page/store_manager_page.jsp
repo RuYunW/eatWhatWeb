@@ -10,7 +10,9 @@
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<% request.setCharacterEncoding("UTF-8");%>
+<meta charset="UTF-8">
 <html>
 <head>
     <title>店铺管理员界面</title>
