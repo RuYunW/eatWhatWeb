@@ -20,7 +20,7 @@ public class StoreDao {
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
-            String sql = "select * from tb_store where store_id='" + StoreID + "'";
+            String sql = "select * from tb_store where store_id='" + StoreID + "';";
             rs = stmt.executeQuery(sql);
             //处理结果集
             while (rs.next()) {

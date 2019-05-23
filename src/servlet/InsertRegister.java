@@ -114,7 +114,8 @@ public class InsertRegister extends HttpServlet {
             UsersDao usersDao = new UsersDao();
             String add_id = ""+(usersDao.findAllID(store_id+"___").size()+1);//不允许为0
             //补位
-            for(int i=0;i<3-add_id.length();i++){
+            int n = add_id.length();
+            for(int i=0;i<3-n;i++){
                 add_id="0"+add_id;
             }
             //完整id

@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page contentType="charset=UTF-8" pageEncoding="UTF-8" %>
 <% request.setCharacterEncoding("UTF-8");%>
 <meta charset="UTF-8">
 <%
@@ -10,15 +10,15 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <base href="<%=basePath%>">
+    <base href="<%=basePath%>"></>
 
     <title>网站管理界面</title>
 
-    <meta http-equiv="pragma" content="no-cache">
-    <meta http-equiv="cache-control" content="no-cache">
-    <meta http-equiv="expires" content="0">
-    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
-    <meta http-equiv="description" content="This is my page">
+    <meta http-equiv="pragma" content="no-cache"></meta>
+    <meta http-equiv="cache-control" content="no-cache"></meta>
+    <meta http-equiv="expires" content="0"></meta>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3"></meta>
+    <meta http-equiv="description" content="This is my page"></meta>
 
     <style type="text/css">
         @import "./css/manager.css";
@@ -35,7 +35,7 @@
 <div class="manager_title">今天中午吃什么网站管理界面</div>
 <a href="index.jsp" class="manager" style="text-align: center;float: right">返回首页</a>
 
-<br>
+    <br>
 <hr>
 <br>
 <div >

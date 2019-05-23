@@ -2,15 +2,14 @@
 <%@ page import="com.wry.jdbc.dao.FoodRandomDao,com.wry.jdbc.domain.Food" %>
 <%@ page import="com.wry.jdbc.domain.Store" %>
 <%@ page import="com.wry.jdbc.dao.StoreDao" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<% request.setCharacterEncoding("UTF-8");%>
-<meta charset="UTF-8">
+
+
 
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-
+<% request.setCharacterEncoding("UTF-8");%>
 <meta http-equiv="content-type" content="text/css;charset=UTF-8">
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
