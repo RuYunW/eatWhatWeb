@@ -1,5 +1,5 @@
-<%@ page import="com.wry.jdbc.dao.FoodRandomDao" %>
-<%@ page import="com.wry.jdbc.domain.Food" %>
+<%@ page import="com.wry.dao.FoodRandomDao" %>
+<%@ page import="com.wry.domain.Food" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: Ash

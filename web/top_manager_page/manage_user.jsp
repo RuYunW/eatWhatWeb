@@ -2,8 +2,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
 <% request.setCharacterEncoding("UTF-8");%>
 <meta charset="UTF-8">
-<%@ page import="com.wry.jdbc.domain.User" %>
-<%@ page import="com.wry.jdbc.dao.UsersDao" %>
+<%@ page import="com.wry.domain.User" %>
+<%@ page import="com.wry.dao.UsersDao" %>
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";

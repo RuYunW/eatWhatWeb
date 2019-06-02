@@ -1,5 +1,5 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ page contentType="charset=UTF-8" pageEncoding="UTF-8" %>
+<%--<%@ page contentType="charset=UTF-8" pageEncoding="UTF-8" %>--%>
 <% request.setCharacterEncoding("UTF-8");%>
 <meta charset="UTF-8">
 <%
@@ -33,7 +33,7 @@
 
 <br>
 <div class="manager_title">今天中午吃什么网站管理界面</div>
-<a href="index.jsp" class="manager" style="text-align: center;float: right">返回首页</a>
+<a href="../index.jsp" class="manager" style="text-align: center;float: right">返回首页</a>
 
     <br>
 <hr>

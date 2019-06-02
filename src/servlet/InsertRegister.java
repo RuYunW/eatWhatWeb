@@ -1,9 +1,9 @@
 package servlet;
 
-import com.wry.jdbc.dao.StoreDao;
-import com.wry.jdbc.dao.UsersDao;
-import com.wry.jdbc.domain.Store;
-import com.wry.jdbc.domain.User;
+import com.wry.dao.StoreDao;
+import com.wry.dao.UsersDao;
+import com.wry.domain.Store;
+import com.wry.domain.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 @WebServlet(name = "InsertRegister",urlPatterns = "/InsertRegister")
 public class InsertRegister extends HttpServlet {

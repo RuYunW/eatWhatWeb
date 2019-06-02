@@ -1,6 +1,6 @@
 package servlet;
 
-import com.wry.jdbc.dao.UsersDao;
+import com.wry.dao.UsersDao;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -24,7 +24,7 @@ public class Check_username extends HttpServlet {
         //获取用户输入的数据
         String name = request.getParameter("username");
         System.out.println(name);
-        //正常情况下，这里的数据应该是要从数据库中的查询出来的，但是我们这里是为了展示一下Ajax，所以就先写死了
+
         UsersDao usersDao = new UsersDao();
 
         if(usersDao.find(name)==null) {//判断用户名是否存在

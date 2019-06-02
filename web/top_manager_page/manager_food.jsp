@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8" contentType="text/html;charset=UTF-8"%>
-<%@ page import="com.wry.jdbc.dao.FoodRandomDao,com.wry.jdbc.domain.Food" %>
-<%@ page import="com.wry.jdbc.domain.Store" %>
-<%@ page import="com.wry.jdbc.dao.StoreDao" %>
+<%@ page import="com.wry.dao.FoodRandomDao,com.wry.domain.Food" %>
+<%@ page import="com.wry.domain.Store" %>
+<%@ page import="com.wry.dao.StoreDao" %>
 
 
 
@@ -69,24 +69,24 @@
                     <th>名称</th><th>价格</th><th>店铺编码</th><th>店铺名称</th><th>具体位置</th>
                 </tr>
 <%--                打印表格--%>
-                <%
-                    FoodRandomDao foodRandomDao = new FoodRandomDao();
-                    ArrayList<Food> list = foodRandomDao.findAll();
-//                    Store store = new Store();
-                    StoreDao storeDao = new StoreDao();
-                    for(int i=0;i<list.size();i++){
-//                out.println(list.get(i).getFoodname()+"   "+list.get(i).getFoodloc()+"   "+list.get(i).getFoodprice()+"<br>");
-                        out.print("<tr>"
-//                        +"<td>"+list.get(i).getId()+"</td>"
-                                +"<td>"+list.get(i).getFoodname()+"</td>"
-                                +"<td>"+list.get(i).getFoodprice()+"</td>"
-                                +"<td>"+list.get(i).getFood_store_id()+"</td>"
-                                +"<td>"+storeDao.find(list.get(i).getFood_store_id()).getStoreName()+"</td>"
-                                +"<td>"+storeDao.find(list.get(i).getFood_store_id()).getStoreLoc()+"</td>"
-                                +"</tr>");
-                    }
-//            for(int a:list)System.out.println(a);
-                %>
+<%--                <%--%>
+<%--                    FoodRandomDao foodRandomDao = new FoodRandomDao();--%>
+<%--                    ArrayList<Food> list = foodRandomDao.findAll();--%>
+<%--//                    Store store = new Store();--%>
+<%--                    StoreDao storeDao = new StoreDao();--%>
+<%--                    for(int i=0;i<list.size();i++){--%>
+<%--//                out.println(list.get(i).getFoodname()+"   "+list.get(i).getFoodloc()+"   "+list.get(i).getFoodprice()+"<br>");--%>
+<%--                        out.print("<tr>"--%>
+<%--//                        +"<td>"+list.get(i).getId()+"</td>"--%>
+<%--                                +"<td>"+list.get(i).getFoodname()+"</td>"--%>
+<%--                                +"<td>"+list.get(i).getFoodprice()+"</td>"--%>
+<%--                                +"<td>"+list.get(i).getFood_store_id()+"</td>"--%>
+<%--                                +"<td>"+storeDao.find(list.get(i).getFood_store_id()).getStoreName()+"</td>"--%>
+<%--                                +"<td>"+storeDao.find(list.get(i).getFood_store_id()).getStoreLoc()+"</td>"--%>
+<%--                                +"</tr>");--%>
+<%--                    }--%>
+<%--//            for(int a:list)System.out.println(a);--%>
+<%--                %>--%>
             </table></div>
             <br>
 

@@ -1,5 +1,5 @@
-<%@ page import="com.wry.jdbc.domain.Store" %>
-<%@ page import="com.wry.jdbc.dao.StoreDao" %><%--
+<%@ page import="com.wry.domain.Store" %>
+<%@ page import="com.wry.dao.StoreDao" %><%--
   Created by IntelliJ IDEA.
   User: Ash
   Date: 2019/5/19

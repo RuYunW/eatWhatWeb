@@ -1,5 +1,5 @@
-<%@ page import="com.wry.jdbc.dao.UsersDao" %>
-<%@ page import="com.wry.jdbc.domain.User" %><%--
+<%@ page import="com.wry.dao.UsersDao" %>
+<%@ page import="com.wry.domain.User" %><%--
   Created by IntelliJ IDEA.
   User: HP
   Date: 2019/4/26

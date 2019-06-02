@@ -1,8 +1,7 @@
 package servlet;
 
-import com.wry.jdbc.dao.StoreManagerDao;
-import com.wry.jdbc.dao.UsersDao;
-import com.wry.jdbc.domain.User;
+import com.wry.dao.StoreManagerDao;
+import com.wry.domain.User;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

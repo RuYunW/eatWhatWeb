@@ -1,7 +1,7 @@
 package servlet;
 
-import com.wry.jdbc.dao.FoodRandomDao;
-import com.wry.jdbc.domain.Food;
+import com.wry.dao.FoodRandomDao;
+import com.wry.domain.Food;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

@@ -1,6 +1,6 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-<%@ page import="com.wry.jdbc.dao.FoodRandomDao,com.wry.jdbc.domain.Food" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
+<%@ page import="com.wry.dao.FoodRandomDao,com.wry.domain.Food" %>
+<%--<%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>--%>
 <% request.setCharacterEncoding("UTF-8");%>
 <meta charset="UTF-8">
 <%
@@ -43,14 +43,14 @@
     <%--左边switch--%>
     <div class="tag_switch">
 
-        <a class="manager" href="manager_page/manager_page.jsp"><div class="tag_manager">管理主界面</div></a>
-        <a class="manager" href="manager_page/manager_food.jsp"><div class="tag_manager">菜品管理</div></a>
-        <a class="manager" href="manager_page/manager_link.jsp"><div class="tag_manager">相关链接管理</div></a>
-        <a class="manager" href="manager_page/manager_ads.jsp"><div class="tag_manager">广告赞助管理</div></a>
-        <a class="manager" href="manager_page/manager_diet.jsp"><div class="tag_manager">科学搭配管理</div></a>
-        <a class="manager" href="manager_page/manager_newfood.jsp"><div class="tag_manager">新上菜品管理</div></a>
-        <a class="manager" href="manager_page/manager_data.jsp"><div class="tag_manager_selected" >数据查看</div></a>
-        <a class="manager" href="manager_page/manage_user.jsp"><div class="tag_manager">用户管理</div></a>
+        <a class="manager" href="top_manager_page/manager_page.jsp"><div class="tag_manager">管理主界面</div></a>
+        <a class="manager" href="top_manager_page/manager_food.jsp"><div class="tag_manager">菜品管理</div></a>
+        <a class="manager" href="top_manager_page/manager_link.jsp"><div class="tag_manager">相关链接管理</div></a>
+        <a class="manager" href="top_manager_page/manager_ads.jsp"><div class="tag_manager">广告赞助管理</div></a>
+        <a class="manager" href="top_manager_page/manager_diet.jsp"><div class="tag_manager">科学搭配管理</div></a>
+        <a class="manager" href="top_manager_page/manager_newfood.jsp"><div class="tag_manager">新上菜品管理</div></a>
+        <a class="manager" href="top_manager_page/manager_data.jsp"><div class="tag_manager_selected" >数据查看</div></a>
+        <a class="manager" href="top_manager_page/manage_user.jsp"><div class="tag_manager">用户管理</div></a>
 
     </div>
 
@@ -68,23 +68,23 @@
                 <th>价格</th>
             </tr>
 
-        <%
-            FoodRandomDao foodRandomDao = new FoodRandomDao();
-            ArrayList<Food> list = foodRandomDao.findAll();
-            for(int i=0;i<list.size();i++){
-//                out.println(list.get(i).getFoodname()+"   "+list.get(i).getFoodloc()+"   "+list.get(i).getFoodprice()+"<br>");
-                out.print("<tr>"
-//                        +"<td>"+list.get(i).getId()+"</td>"
-                        +"<td>"+list.get(i).getFoodname()+"</td>"
-                        +"<td>"+list.get(i).getFoodloc()+"</td>"
-                        +"<td>"+list.get(i).getDetailloc()+"</td>"
-                        +"<td>"+list.get(i).getFoodprice()+"</td>"
-                        +"</tr>");
-            }
-//            for(int a:list)System.out.println(a);
+<%--        <%--%>
+<%--            FoodRandomDao foodRandomDao = new FoodRandomDao();--%>
+<%--            ArrayList<Food> list = foodRandomDao.findAll();--%>
+<%--            for(int i=0;i<list.size();i++){--%>
+<%--//                out.println(list.get(i).getFoodname()+"   "+list.get(i).getFoodloc()+"   "+list.get(i).getFoodprice()+"<br>");--%>
+<%--                out.print("<tr>"--%>
+<%--//                        +"<td>"+list.get(i).getId()+"</td>"--%>
+<%--                        +"<td>"+list.get(i).getFoodname()+"</td>"--%>
+<%--                        +"<td>"+list.get(i).getFoodloc()+"</td>"--%>
+<%--                        +"<td>"+list.get(i).getDetailloc()+"</td>"--%>
+<%--                        +"<td>"+list.get(i).getFoodprice()+"</td>"--%>
+<%--                        +"</tr>");--%>
+<%--            }--%>
+<%--//            for(int a:list)System.out.println(a);--%>
 
 
-        %>
+<%--        %>--%>
         </table>
 
 
