@@ -7,7 +7,7 @@
 --%>
 <%--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" pageEncoding="UTF-8" %>
-<% request.setCharacterEncoding("UTF-8");%>
+<% request.setCharacterEncoding("UTF-8");response.setCharacterEncoding("UTF-8");%>
 <meta charset="UTF-8">
 <%
     String path = request.getContextPath();
@@ -36,7 +36,7 @@
 <hr>
 <div style="font-family: '等线 Light';font-size: larger;background-color: rgba(255,255,255,0.5);margin: 2%;padding: 5%;padding-left: 10%;padding-right: 10%;" >
     <center>
-        <form action="InsertRegister" method="post" >
+        <form action="InsertRegister" method="get" accept-charset="UTF-8">
             <table>
                 <tr>
                     <td>管理店铺位置：</td>

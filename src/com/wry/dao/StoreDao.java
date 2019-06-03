@@ -27,6 +27,7 @@ public class StoreDao {
                 store.setStoreLoc(rs.getString("store_loc"));
                 store.setStoreName(rs.getString("store_name"));
 
+
                 return store;
             }
             return null;

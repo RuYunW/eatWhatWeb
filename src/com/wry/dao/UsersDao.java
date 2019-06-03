@@ -11,20 +11,25 @@ import com.wry.utils.JDBCUtils;
 //注册用户
 public class UsersDao {
     public boolean insert(User user){
+        System.out.println("userInser1 doing");
         Connection conn = null;
         Statement stmt = null;
         ResultSet rs = null;
         try {
+            System.out.println("userInsert try doing");
             conn = JDBCUtils.getConnection();
             stmt = conn.createStatement();
-            String sql = "insert into tb_store_manager (id,username,password,manager_store_id,email) values('"
-                    +user.getManager_store_id()+"','"
-                    +user.getUsername()+"','"
-                    +user.getPassword()+"','"
-                    +user.getManager_store_id()+"','"
-                    +user.getEmail()+"')";
-            int num = stmt.executeUpdate(sql);
+            System.out.println("userInsert sql doing");
+            String sql = "INSERT INTO tb_store_manager (id,username,password,manager_store_id,email) VALUES('"+
+                    user.getId()+"','"+
+                    user.getUsername()+"','"+
+                    user.getPassword()+"','"+
+                    user.getManager_store_id()+"','"+
+                    user.getEmail()+"')";
+            int num;
+            num = stmt.executeUpdate(sql);
             if (num>0){
+                System.out.println("user insert done");
                 return true;
             }
             return false;
@@ -166,7 +171,6 @@ public class UsersDao {
             //发送SQL语句
             String sql = "select * from tb_store_manager where id like'"+userID+"'";
             rs = stmt.executeQuery(sql);
-
             //处理结果集
             while (rs.next()){
                 User user = new User();

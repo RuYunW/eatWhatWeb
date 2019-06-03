@@ -85,7 +85,7 @@
         <br>
         <div style="float: left;background: rgba(255,255,255,0.3);padding: 10px;margin: 10px;">
 
-            <form action="InsertFood" method="post">
+            <form action="InsertFood" method="get" accept-charset="UTF-8">
                 <div style="font-weight: bold;font-size: larger">执行插入操作，将信息填入下表</div>
                 <br>
                 <table>

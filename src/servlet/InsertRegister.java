@@ -1,6 +1,7 @@
 package servlet;
 
 import com.wry.dao.StoreDao;
+import com.wry.dao.StoreManagerDao;
 import com.wry.dao.UsersDao;
 import com.wry.domain.Store;
 import com.wry.domain.User;
@@ -23,7 +24,6 @@ public class InsertRegister extends HttpServlet {
 //            request.getRequestDispatcher("top_manager_page/test.jsp");
 //        }
         if(request.getParameter("bigLoc")!=null && request.getParameter("smallLoc")!=null) {
-            User user = new User();
 
             String store_id = "";
             String bigLoc=(String)request.getParameter("bigLoc");
@@ -111,7 +111,11 @@ public class InsertRegister extends HttpServlet {
                 }
             }
             UsersDao usersDao = new UsersDao();
+            System.out.println(store_id);
+            //自动编码位
             String add_id = ""+(usersDao.findAllID(store_id+"___").size()+1);//不允许为0
+            System.out.println(add_id);
+
             //补位
             int n = add_id.length();
             for(int i=0;i<3-n;i++){
@@ -119,24 +123,38 @@ public class InsertRegister extends HttpServlet {
             }
             //完整id
             store_id+=add_id;
+            System.out.println("store_id_servlet:"+store_id);
 
             session.setAttribute("storeID",store_id);
             session.setAttribute("storeName",request.getParameter("store_name"));
             session.setAttribute("storeLoc",storeLoc);
             session.setAttribute("username",session.getAttribute("register_username"));
+
             //set对象变量
+            User user = new User();
+
+            user.setId(store_id);
+            System.out.println("servlet get userID:"+user.getId());
             user.setManager_store_id(store_id);
+            System.out.println("servlet get storeID:"+user.getManager_store_id());
             user.setUsername((String)session.getAttribute("register_username"));
+            System.out.println("servlet get username:"+user.getUsername());
             user.setPassword((String)session.getAttribute("register_password"));
+            System.out.println("servlet get userPassWD:"+user.getPassword());
             user.setEmail((String) session.getAttribute("manager_email"));
+            System.out.println("servlet get email:"+user.getEmail());
 
 
             //用户插入数据到数据库
             usersDao.insert(user);
+
 //            request.getRequestDispatcher("/InsertStore").forward(request,response);
             //店铺插入到数据库
             Store store = new Store();
             store.setStoreName((String)session.getAttribute("storeName"));
+            System.out.println("obj_name:"+store.getStoreName());
+            System.out.println("par_name"+request.getParameter("store_name"));
+            System.out.println("session_name："+(String)session.getAttribute("storeName"));
             store.setStoreLoc((String)session.getAttribute("storeLoc"));
             store.setStoreId((String)session.getAttribute("storeID"));
 

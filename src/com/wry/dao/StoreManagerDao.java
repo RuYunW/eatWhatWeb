@@ -18,7 +18,8 @@ public class StoreManagerDao {
         try {
             conn = JDBCUtils.getConnection();
             stmt = conn.createStatement();
-            String sql = "insert into tb_store_manager (username,password,manager_store_id,email) values('"
+            String sql = "insert into tb_store_manager (id,username,password,manager_store_id,email) values('"
+                    +user.getId()+"','"
                     +user.getUsername()+"','"
                     +user.getPassword()+"','"
                     +user.getManager_store_id()+"','"
