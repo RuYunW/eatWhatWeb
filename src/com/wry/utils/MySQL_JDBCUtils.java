@@ -2,7 +2,7 @@ package com.wry.utils;
 
 import java.sql.*;
 
-public class JDBCUtils {
+public class MySQL_JDBCUtils {
     public static Connection getConnection() throws SQLException,ClassNotFoundException{
         Class.forName("com.mysql.jdbc.Driver");
         String url = "jdbc:mysql://localhost:3306/db_users?characterEncoding=utf-8";
