@@ -5,6 +5,7 @@ import com.wry.dao.StoreManagerDao;
 import com.wry.dao.UsersDao;
 import com.wry.domain.Store;
 import com.wry.domain.User;
+import com.wry.utils.MD5;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -139,7 +140,8 @@ public class InsertRegister extends HttpServlet {
             System.out.println("servlet get storeID:"+user.getManager_store_id());
             user.setUsername((String)session.getAttribute("register_username"));
             System.out.println("servlet get username:"+user.getUsername());
-            user.setPassword((String)session.getAttribute("register_password"));
+            String passMD5 = MD5.getMD5String((String)session.getAttribute("register_password"));
+            user.setPassword(passMD5);
             System.out.println("servlet get userPassWD:"+user.getPassword());
             user.setEmail((String) session.getAttribute("manager_email"));
             System.out.println("servlet get email:"+user.getEmail());

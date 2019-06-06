@@ -2,6 +2,7 @@ package servlet;
 
 import com.wry.dao.StoreManagerDao;
 import com.wry.domain.User;
+import com.wry.utils.TransactSQLInjection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -22,7 +23,7 @@ public class Register extends HttpServlet {
         String email = request.getParameter("manager_email");
 
         StoreManagerDao storeManagerDao = new StoreManagerDao();
-        User user = storeManagerDao.findName(username);
+        User user = storeManagerDao.findName(TransactSQLInjection.re(username));
         if (user != null) {
             //如果返回不为空，则重名,留在原地
             session.setAttribute("registerResult", "用户名重复");

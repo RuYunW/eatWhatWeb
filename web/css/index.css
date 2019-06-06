@@ -97,8 +97,11 @@ a.sub_title{
     /*background-color: rgba(255,255,255,0.7);*/
     /*垂直居中*/
     /*vertical-align: middle;*/
-    width: auto;
+    width: 50%;
     height: auto;
+    /*alignment: center;*/
+    /*text-align: center;*/
+    /*align-content: center;*/
     float: left;
     /*float: right;*/
 }

@@ -2,6 +2,8 @@ package servlet;
 
 import com.wry.dao.UsersDao;
 import com.wry.domain.User;
+import com.wry.utils.MD5;
+import com.wry.utils.TransactSQLInjection;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -17,16 +19,17 @@ public class doLogin extends HttpServlet {
         HttpSession session = request.getSession(true);
         //从JSP取值
         String u = request.getParameter("username");
-        String p = request.getParameter("password");
+        String p = TransactSQLInjection.re(request.getParameter("password"));
+        String passMD5 = MD5.getMD5String(p);
 
 //         匹配
         UsersDao usersDao = new UsersDao();
-        User user = usersDao.find(u);
+        User user = usersDao.find(TransactSQLInjection.re(u));
 //         String uname = user.getUsername();
 
         if(user!=null){
             String passwd = user.getPassword();
-            if(p.equals(passwd)){
+            if(passMD5.equals(passwd)){
                 String result = "登录成功";
                 session.setAttribute("state",result);
                 session.setAttribute("username",u);

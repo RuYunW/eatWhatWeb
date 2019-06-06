@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="eatWhatWeb">
+    <output-path>$PROJECT_DIR$/out/artifacts/eatWhatWeb</output-path>
+    <root id="archive" name="eatWhatWeb.war">
+      <element id="artifact" artifact-name="eatWhatWeb:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/activation.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/jsp-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mail.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/tomcat-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/tomcat-util.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-fileupload-1.4.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/commons-io-2.6.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/mysql-connector-java-5.0.4-bin.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/servlet-api.jar" />
+          <element id="file-copy" path="$PROJECT_DIR$/web/WEB-INF/lib/tomcat-jdbc.jar" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

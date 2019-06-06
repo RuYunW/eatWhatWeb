@@ -21,7 +21,6 @@
 <br><br>
 <%
     if(session.getAttribute("emailResult")==null){
-
     }else {
         out.println(session.getAttribute("emailResult"));
     }
@@ -41,7 +40,7 @@
 </form>
 <br>
 <div style="font-family: '等线 Light';font-size: larger">
-    <a href="../store_manager_register.jsp" style="float: right">返回重新输入信息</a>
+    <a href="/store_manager_register.jsp" style="float: right">返回重新输入信息</a>
 </div>
     </center>
 </div>

@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.wry.domain.User;
-import com.wry.utils.JDBCUtils;
+import com.wry.utils.MySQL_JDBCUtils;
 
 //注册用户
 public class UsersDao {
@@ -17,7 +17,7 @@ public class UsersDao {
         ResultSet rs = null;
         try {
             System.out.println("userInsert try doing");
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             stmt = conn.createStatement();
             System.out.println("userInsert sql doing");
             String sql = "INSERT INTO tb_store_manager (id,username,password,manager_store_id,email) VALUES('"+
@@ -36,7 +36,7 @@ public class UsersDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return false;
     }
@@ -49,7 +49,7 @@ public class UsersDao {
         ArrayList<User> list = new ArrayList<User>();
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -68,7 +68,7 @@ public class UsersDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return null;
     }
@@ -80,7 +80,7 @@ public class UsersDao {
         ResultSet rs = null;
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -100,7 +100,7 @@ public class UsersDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return null;
     }
@@ -112,7 +112,7 @@ public class UsersDao {
         ResultSet rs = null;
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -125,7 +125,7 @@ public class UsersDao {
         }catch (Exception e) {
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return false;
     }
@@ -137,7 +137,7 @@ public class UsersDao {
         ResultSet rs = null;
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -151,7 +151,7 @@ public class UsersDao {
         }catch (Exception e) {
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return false;
 
@@ -165,7 +165,7 @@ public class UsersDao {
         ArrayList<User> list = new ArrayList<>();
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -180,7 +180,7 @@ public class UsersDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return null;
     }

@@ -1,7 +1,7 @@
 package com.wry.dao;
 
 import com.wry.domain.Store;
-import com.wry.utils.JDBCUtils;
+import com.wry.utils.MySQL_JDBCUtils;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -15,7 +15,7 @@ public class StoreDao {
         ResultSet rs = null;
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -34,7 +34,7 @@ public class StoreDao {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JDBCUtils.release(rs, stmt, conn);
+            MySQL_JDBCUtils.release(rs, stmt, conn);
         }
         return null;
     }
@@ -45,7 +45,7 @@ public class StoreDao {
         Statement stmt = null;
         ResultSet rs = null;
         try {
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             stmt = conn.createStatement();
             String sql = "insert into tb_store (store_id,store_name,store_loc) values('"
                     + store.getStoreId() + "','"
@@ -59,7 +59,7 @@ public class StoreDao {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            JDBCUtils.release(rs, stmt, conn);
+            MySQL_JDBCUtils.release(rs, stmt, conn);
         }
         return false;
     }

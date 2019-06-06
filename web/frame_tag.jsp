@@ -26,10 +26,14 @@
 <%--标题--%>
 <div class="title">
     <%--校徽--%>
-    <div class="logo"><a href="../index.jsp"><img src="../imgs/logo_sdnu.png" alt="SDNU LOGO" width="90px" height="90px"/></a></div>
+    <%--    <div class="logo"><a href="index.jsp"><img src="imgs/logo_sdnu.png" alt="SDNU LOGO" width="90px" height="90px"/></a></div>--%>
     <%--名称--%>
-    <div class="name" ><span style="color: white;font-size: larger;">山东吃饭大学</span>&nbsp;
-        <br><span style="color: lightgray;">今天吃什么？</span></div>
+
+    <%--        <center>--%>
+    <div class="name" >
+        <%--        <span style="color: white;font-size: larger;">山东吃饭大学</span>&nbsp;--%>
+        <br><div style="color: white;font-size: xx-large;padding-left: 10%">今天中午吃什么？</div></div>
+    <%--        </center>--%>
     <div class="search"><input class="input_search" type="text" placeholder="请输入..." id="search" ></div>
 
 </div>

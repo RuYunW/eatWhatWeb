@@ -31,7 +31,7 @@ public class MailSending extends HttpServlet {
 
         String veriCode = "" + (int) (Math.random() * 10) + (int) (Math.random() * 10) + (int) (Math.random() * 10) + (int) (Math.random() * 10);
         session.setAttribute("veriCode", veriCode);
-        String body = "验证码为：" + session.getAttribute("veriCode"); // 邮件内容
+        String body = "验证码为：" + session.getAttribute("veriCode")+"\n\n此邮件由系统自动发送，请勿直接回复。"; // 邮件内容
 
     // 以下为发送程序，用户无需改动
         try {

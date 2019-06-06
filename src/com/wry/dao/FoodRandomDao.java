@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 import com.wry.domain.Food;
-import com.wry.utils.JDBCUtils;
+import com.wry.utils.MySQL_JDBCUtils;
 
 public class FoodRandomDao {
 
@@ -18,7 +18,7 @@ public class FoodRandomDao {
         ArrayList<Food> list = new ArrayList<Food>();
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -40,7 +40,7 @@ public class FoodRandomDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return null;
     }
@@ -53,7 +53,7 @@ public class FoodRandomDao {
         ArrayList<Food> list = new ArrayList<>();
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -73,7 +73,7 @@ public class FoodRandomDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return null;
     }
@@ -84,7 +84,7 @@ public class FoodRandomDao {
         Statement stmt = null;
         ResultSet rs = null;
         try {
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             stmt = conn.createStatement();
             String sql = "insert into tb_food (food_id,food_name,food_price,food_store_id,food_pic) values('"
                     +food.getId()+"','"
@@ -100,7 +100,7 @@ public class FoodRandomDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return false;
     }
@@ -112,7 +112,7 @@ public class FoodRandomDao {
 //        ArrayList<Food> list = new ArrayList<Food>();
         try {
             //获得数据的连接
-            conn = JDBCUtils.getConnection();
+            conn = MySQL_JDBCUtils.getConnection();
             //获得Statement对象
             stmt = conn.createStatement();
             //发送SQL语句
@@ -124,7 +124,7 @@ public class FoodRandomDao {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            JDBCUtils.release(rs,stmt,conn);
+            MySQL_JDBCUtils.release(rs,stmt,conn);
         }
         return 0;
     }
